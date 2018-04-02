@@ -1,0 +1,29 @@
+Grammar for SQL statements
+
+SQL_statement -> select_statement | insert_statement | E
+
+select_statement -> "SELECT" column_name "FROM" table optional_where
+
+column_name -> *| "COLUMN_INPUT" alias column_tail
+column_alias -> "AS" "COLUMN_ALIAS" | E
+column_tail -> , column_name columns_tail | E
+
+table -> table_name table_join table_alias table_tail
+table_name -> "TABLE_INPUT"
+table_alias -> "AS" table_name | E
+table_join -> "JOIN" table_name | E
+table_tail -> , table_name table_tail | E
+
+optional_where -> "WHERE" where | E 
+where -> clause_name operator value and
+clause_name -> ("COLUMN_INPUT" | "TABLE_INPUT"."COLUMN_INPUT")
+operator -> = | <> | > | >= | <= | <
+value -> ("NUMBER" | "TABLE_INPUT"."COLUMN_INPUT" | "SQL_STRING")
+and -> AND where | E
+
+insert_statement -> "INSERT INTO" table_name attributes "VALUES" "(" values ")"
+attribute -> "(" attribute_name attributes_tail | E
+attributes_tail -> , attribute_name attributes_tail | ")"
+attribute_name -> "ATTRIBUTE_NAME"
+values -> ("NUMBER" | "SQL_STRING") values_tail
+values_tail -> , values | E

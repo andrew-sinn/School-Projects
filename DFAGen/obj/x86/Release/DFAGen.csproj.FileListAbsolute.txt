@@ -1,0 +1,8 @@
+H:\Courses\DFAGen\DFAGen\bin\Release\DFAGen.exe
+H:\Courses\DFAGen\DFAGen\bin\Release\DFAGen.pdb
+H:\Courses\DFAGen\DFAGen\obj\x86\Release\ResolveAssemblyReference.cache
+H:\Courses\DFAGen\DFAGen\obj\x86\Release\DFAGen.Properties.Resources.resources
+H:\Courses\DFAGen\DFAGen\obj\x86\Release\GenerateResource.read.1.tlog
+H:\Courses\DFAGen\DFAGen\obj\x86\Release\GenerateResource.write.1.tlog
+H:\Courses\DFAGen\DFAGen\obj\x86\Release\DFAGen.exe
+H:\Courses\DFAGen\DFAGen\obj\x86\Release\DFAGen.pdb
